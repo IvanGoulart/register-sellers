@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Repositories\Seller;
 use Illuminate\Http\Request;
 
+
 class SellerController extends Controller
 {
     protected $seller;
@@ -20,14 +21,16 @@ class SellerController extends Controller
 
       }
 
-      public function store($id){
-dd($id);
-        $this -> seller -> register($id);
+      public function store(Request $request){
+
+        $this -> seller -> register($request);
         return redirect()->route('listSellers');
       }
 
-      public function show(Request $request){
-        $sellers = $this -> seller -> unico($request->search);
-        return view('list-sellers', compact('sellers'));
+      public function show($id){
+
+        $SellerFind = $this -> seller -> findSeller($id);
+
+        return view('list-sales-seller', compact('SellerFind'));
       }
 }

@@ -17,7 +17,9 @@ class Seller extends Model
     }
 
     public function register($request){
+
         $response = Http::post($this->urlbase . 'seller/create', [
+
             'name' => $request->name,
             'email' => $request->email
         ]);
@@ -25,10 +27,23 @@ class Seller extends Model
         return json_decode($response->getBody());
     }
 
-    //Funcion para filtrar um Usuario
-/*    public function filter($id){
-        $response = Http::get($this->urlbase. 'sales/show');
+    //Funcion para filtrar um Seller
+    public function findSeller($id){
+
+        $response = Http::get($this->urlbase. 'sale/show/'.$id);
         return json_decode($response -> getBody() -> getContents());
-    }*/
+    }
+
+    //Funcion para filtrar um Seller
+    public function registerSale($request){
+
+        $response = Http::post($this->urlbase. 'sale/create',[
+            'seller_id' => $request->idSeller,
+            'amount' => $request->amount,
+            'dt_sale' => $request->dtSale
+
+        ]);
+        return json_decode($response -> getBody() -> getContents());
+    }
 
 }

@@ -19,12 +19,12 @@
             <tbody>
                 @foreach ($sellers as $seller )
 
-                <form action="showSales{{$seller->id}}" method="get">
+                <form action="showSales/{{$seller->id}}" method="get">
                     <tr>
                         <th scope="row">{{$seller->id}}</th>
                         <td>{{$seller->name}}</td>
                         <td>{{$seller->email}}</td>
-                        <td>{{$seller->created_at}}</td>
+                        <td>{{ \Carbon\Carbon::parse($seller->created_at)->format('d/m/Y')}}</td>
                         <td>
                           <button>
                               <svg xmlns="http://www.w3.org/2000/svg" color="green" width="16" height="16" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">

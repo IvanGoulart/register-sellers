@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SellerController;
+use App\Http\Controllers\SaleController;
 
 
 Route::get('/', [SellerController::class, 'index'])->name('listSellers');
@@ -18,4 +19,4 @@ Route::post('/registerSeller', [SellerController::class, 'store'])->name('regist
 
 Route::get('/showSales/{id}', [SellerController::class, 'show'])->name('showSales');
 
-
+Route::post('/registerSale', [SaleController::class, 'store'])->name('registerSale');
