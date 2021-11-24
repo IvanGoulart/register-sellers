@@ -19,7 +19,7 @@
             <tbody>
                 @foreach ($sellers as $seller )
 
-                <form action="" method="get">
+                <form action="showSales{{$seller->id}}" method="get">
                     <tr>
                         <th scope="row">{{$seller->id}}</th>
                         <td>{{$seller->name}}</td>
