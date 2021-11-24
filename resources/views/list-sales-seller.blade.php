@@ -53,13 +53,15 @@
                 </tr>
             </thead>
             <tbody>
+                @if(!empty($SellerFind))
                 @foreach ($SellerFind->sales as $sale )
                     <tr>
-                        <td>{{$sale->amount}}</td>
+                        <td>R$ {{$sale->amount}}</td>
                         <td>{{$sale->dt_sale}}</td>
-                        <td>{{($sale->amount + ($sale->amount * 0.085))}}</td>
+                        <td>R$ {{($sale->amount + ($sale->amount * 0.085))}}</td>
                     </tr>
                 @endforeach
+                @endif
             </tbody>
         </table>
     </div>
