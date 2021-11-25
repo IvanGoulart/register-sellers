@@ -25,10 +25,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('registerSeller')}}">Cadastro</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('listSalesSeller')}}">Listar Vendas</a>
-                        </li>
-
                     </ul>
                 </div>
             </div>

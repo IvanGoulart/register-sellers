@@ -11,9 +11,9 @@ Route::get('/registerSeller', function () {
     return view('form-seller');
 });
 
-Route::get('/listSalesSeller', function () {
+/*Route::get('/listSalesSeller', function () {
     return view('list-sales-seller');
-})->name('listSalesSeller');
+})->name('listSalesSeller');*/
 
 Route::post('/registerSeller', [SellerController::class, 'store'])->name('registerSeller');
 
