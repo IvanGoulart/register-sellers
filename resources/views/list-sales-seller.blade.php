@@ -6,7 +6,6 @@
 
 <div class="jumbotron">
     <div class="mb-3">
-
         <h5>Vendedor: {{$SellerFind->id}}  - {{$SellerFind->name}}</h5>
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
@@ -25,7 +24,7 @@
                                     <label for="" class="col-form-label">Valor R$</label>
                                 </div>
                                 <div class="col-auto">
-                                <input name="amount" type="number" min="0.00" max="10000.00" step="0.01" />
+                                <input name="amount" type="number" min="0.00" max="100000000000000.00" step="0.01" />
                                 </div>
                                 <div class="col-auto">
                                     <label for="" class="col-form-label">Data da venda</label>

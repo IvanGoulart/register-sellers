@@ -30,7 +30,7 @@ class Seller extends Model
     //Funcion para filtrar um Seller
     public function findSeller($id){
 
-        $response = Http::get($this->urlbase. 'sale/show/'.$id);
+        $response = Http::get($this->urlbase. 'seller/show/'.$id);
         return json_decode($response -> getBody() -> getContents());
     }
 
