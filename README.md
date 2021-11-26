@@ -18,4 +18,8 @@ Aplicação feita em laravel para cadastrar vendedores, lanças suas vendas, cal
     <li>Executar o comando php artisan serve</li>
 </ul>
 
+## Especificações
+
+Esta aplicação foi construida para consumir endpoint de uma api. 
+As apis podem ser encontradas no projeto api-sellers.
 
