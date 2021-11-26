@@ -17,6 +17,7 @@
                 </tr>
             </thead>
             <tbody>
+
                 @foreach ($sellers as $seller )
 
                 <form action="showSales/{{$seller->id}}" method="get">

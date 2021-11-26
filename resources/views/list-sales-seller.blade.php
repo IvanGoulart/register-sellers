@@ -24,7 +24,7 @@
                                     <label for="" class="col-form-label">Valor R$</label>
                                 </div>
                                 <div class="col-auto">
-                                <input name="amount" type="number" min="0.00" max="100000000000000.00" step="0.01" />
+                                <input name="amount" type="number" min="0.00" max="100000000000000.00" step="0.01" required/>
                                 </div>
                                 <div class="col-auto">
                                     <label for="" class="col-form-label">Data da venda</label>
@@ -55,7 +55,7 @@
                 @if(!empty($SellerFind))
                 @foreach ($SellerFind->sales as $sale )
                     <tr>
-                        <td>{{$sale->dt_sale}}</td>
+                        <td>{{\Carbon\Carbon::parse($sale->dt_sale)->format('d/m/Y') }}</td>
                         <td>R$ {{$sale->amount}}</td>
                         <td>R$ {{$sale->total_amount}}</td>
                     </tr>
