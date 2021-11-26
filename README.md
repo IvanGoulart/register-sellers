@@ -14,7 +14,8 @@ Aplicação feita em laravel para cadastrar vendedores, lanças suas vendas, cal
 <ul>
     <li>Fazer o clone branch master</li>    
     <li>Criar arquivo .env</li>    
-    <li>Executar o comando composer install</li>    
+    <li>Executar o comando composer install</li>
+    <li>Executar o comando php artisan key:generate</li>
     <li>Executar o comando php artisan serve</li>
 </ul>
 
