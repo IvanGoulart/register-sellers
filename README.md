@@ -20,6 +20,7 @@ Aplicação feita em laravel para cadastrar vendedores, lanças suas vendas, cal
 
 ## Especificações
 
-Esta aplicação foi construida para consumir endpoint de uma api. 
-As apis podem ser encontradas no projeto api-sellers.
+Esta aplicação foi construida para consumir endpoint de uma api. <br>
+As apis podem ser encontradas no projeto api-sellers.<br>
+A aplicação esta preparada para consumir apis no endpoint 'localhost:8000/api/'.
 
