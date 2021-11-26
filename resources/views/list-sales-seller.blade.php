@@ -32,7 +32,7 @@
                                 </div>
 
                                 <div class="col-auto">
-                                    <input name="dtSale" type="date" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                                    <input name="dtSale" type="date" id="inputPassword6" class="form-control" required aria-describedby="passwordHelpInline">
                                 </div>
                                 <div class="col-auto">
                                     <input class="btn btn-primary" type="submit" value="Gravar">
@@ -47,8 +47,8 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">Valor da venda</th>
                     <th scope="col">Data da Venda</th>
+                    <th scope="col">Valor da venda</th>
                     <th scope="col">Comissão</th>
                 </tr>
             </thead>
@@ -56,9 +56,9 @@
                 @if(!empty($SellerFind))
                 @foreach ($SellerFind->sales as $sale )
                     <tr>
-                        <td>R$ {{$sale->amount}}</td>
                         <td>{{$sale->dt_sale}}</td>
-                        <td>R$ {{($sale->amount + ($sale->amount * 0.085))}}</td>
+                        <td>R$ {{$sale->amount}}</td>
+                        <td>R$ {{$sale->total_amount}}</td>
                     </tr>
                 @endforeach
                 @endif
